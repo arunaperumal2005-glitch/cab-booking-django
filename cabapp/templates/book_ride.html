@@ -1,0 +1,9 @@
+<h2>Book Ride</h2>
+<form method="POST">
+    {% csrf_token %}
+    
+    <input type="text" name="pickup_location" placeholder="Pickup Location"><br><br>
+    <input type="text" name="drop_location" placeholder="Drop Location"><br><br>
+    
+    <input type="submit" value="Book Ride">
+</form>

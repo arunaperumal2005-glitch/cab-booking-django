@@ -1,0 +1,11 @@
+<h2>Drives rides</h2>
+
+{% for ride in rides %}
+
+<p>
+    Ride {{ ride.id }}
+    status {{ ride.status }}
+    <a href="/status/{{ride.id}}/STARTED/">start</a>
+</p>
+
+{% endfor %}
