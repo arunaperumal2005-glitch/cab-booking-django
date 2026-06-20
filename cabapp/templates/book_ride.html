@@ -1,9 +1,62 @@
-<h2>Book Ride</h2>
-<form method="POST">
-    {% csrf_token %}
-    
-    <input type="text" name="pickup_location" placeholder="Pickup Location"><br><br>
-    <input type="text" name="drop_location" placeholder="Drop Location"><br><br>
-    
-    <input type="submit" value="Book Ride">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Ride</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .ride-box{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        input{
+            width:250px;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        .btn{
+            background:#28a745;
+            color:white;
+            border:none;
+            padding:10px;
+            width:270px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="ride-box">
+    <h2>🚖 Book Ride</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="pickup_location" placeholder="Pickup Location"><br>
+
+        <input type="text" name="drop_location" placeholder="Drop Location"><br>
+
+        <input type="submit" value="Book Ride" class="btn">
+    </form>
+</div>
+
+</body>
+</html>

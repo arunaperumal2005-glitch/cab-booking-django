@@ -1,11 +1,57 @@
-<h2>Drives rides</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Dashboard</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding:20px;
+            background:#f4f4f4;
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        .ride-card{
+            background:white;
+            padding:15px;
+            margin:15px auto;
+            width:60%;
+            border-radius:8px;
+            box-shadow:0 0 8px rgba(0,0,0,0.1);
+        }
+
+        .btn{
+            text-decoration:none;
+            background:#28a745;
+            color:white;
+            padding:8px 15px;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#218838;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🚖 Driver Dashboard</h2>
 
 {% for ride in rides %}
 
-<p>
-    Ride {{ ride.id }}
-    status {{ ride.status }}
-    <a href="/status/{{ride.id}}/STARTED/">start</a>
-</p>
+<div class="ride-card">
+    <p><strong>Ride ID:</strong> {{ ride.id }}</p>
+    <p><strong>Status:</strong> {{ ride.status }}</p>
+
+    <a class="btn" href="/status/{{ride.id}}/STARTED/">
+        Start Ride
+    </a>
+</div>
 
 {% endfor %}
+
+</body>
+</html>

@@ -1,11 +1,63 @@
-<h2>My Rides</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Rides</title>
 
-{% for ride in rides %}
-<p>
-ride {{ride.id}}
-{{ride.pickup_location}}
-{{ride.drop_location}}
-{{ride.fare}}
-{{ride.status}}
-</p>
-{% endfor %}
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding:20px;
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        table{
+            width:80%;
+            margin:auto;
+            border-collapse:collapse;
+        }
+
+        th, td{
+            border:1px solid #ddd;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>🚖 My Rides</h2>
+
+<table>
+    <tr>
+        <th>Ride ID</th>
+        <th>Pickup Location</th>
+        <th>Drop Location</th>
+        <th>Fare</th>
+        <th>Status</th>
+    </tr>
+
+    {% for ride in rides %}
+    <tr>
+        <td>{{ ride.id }}</td>
+        <td>{{ ride.pickup_location }}</td>
+        <td>{{ ride.drop_location }}</td>
+        <td>{{ ride.fare }}</td>
+        <td>{{ ride.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

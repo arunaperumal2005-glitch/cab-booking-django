@@ -1,10 +1,67 @@
-<form method="POST">
-{% csrf_token %}
-<input type="text" name="username" placeholder="username"><br><Br>
-<input type="text" name="password" placeholder="password"><br><Br>
-<select name="role">
-    <option value="CUSTOMER">customer</option>
-    <option value="DRIVER">driver</option>
-</select>
-<input type="submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .register-box{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        input, select{
+            width:250px;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:270px;
+            padding:10px;
+            background:#28a745;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-box">
+    <h2>Register</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="username" placeholder="Username"><br>
+
+        <input type="password" name="password" placeholder="Password"><br>
+
+        <select name="role">
+            <option value="CUSTOMER">Customer</option>
+            <option value="DRIVER">Driver</option>
+        </select><br>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
