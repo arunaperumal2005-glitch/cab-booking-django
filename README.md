@@ -69,16 +69,22 @@ The application uses Django Models and MySQL for storing:
 ## Screenshots
 
 ### Home Page
+![Home Page](home_page.png)
 
 ### Login page
+![Login Page](login_page.png)
 
 ### Register page
+![Register Page](register_page.png)
 
 ### Ride Booking
+![Booking Ride Page](ride_booking_page.png)
 
 ### My Rides
+![Rides Page](my_rides.png)
 
 ### Available Rides
+![Available Rides Page](available_rides.png)
 
 ## Learning Outcomes
 
